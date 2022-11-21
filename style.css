@@ -1,0 +1,154 @@
+:root {
+    --clr-blue: #2081f9;
+    --clr-orange: #f99820;
+    --clr-gray: rgb(20, 20, 20);
+    --clr-white: rgb(235, 235, 235);
+    --spc-default: 0.7rem;
+}
+
+* {
+    font-size: 1.25rem;
+    color: var(--clr-white);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--clr-gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row>* {
+    padding: 0;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    padding: var(--spc-default);
+}
+
+i {
+    font-size: 2rem;
+}
+
+i.bi-x-lg {
+    color: var(--clr-blue);
+}
+
+i.bi-circle {
+    color: var(--clr-orange);
+}
+
+p {
+    margin: 0;
+    font-weight: 600;
+}
+
+p#move {
+    display: block;
+    background-color: var(--clr-blue);
+    padding: var(--spc-default);
+    color: var(--clr-white);
+    width: 600px;
+    text-align: center;
+    font-weight: 600;
+}
+
+p#result {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.line {
+    background-color: var(--clr-white);
+}
+
+.vertical-line {
+    height: 8px;
+    border-radius: 10px;
+    width: calc(3*80px + 8px + 8px);
+}
+
+.horizontal-line {
+    width: 8px;
+    height: 100%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100%;
+}
+
+.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    * {
+        font-size: 1.5rem;
+    }
+    p#move {
+        border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+    }
+    .col {
+        width: 150px;
+        height: 150px;
+    }
+    i {
+        font-size: 3rem;
+    }
+    .vertical-line {
+        width: calc(3*150px + 8px + 8px);
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
