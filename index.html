@@ -7,41 +7,72 @@
         <title>Tic Tac Toe</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script defer src="script.js"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <h1>Tic Tac Toe</h1>
         <div class="container">
-            <div class="row">
-                <div class="col"></div>
-                <div class="line horizontal-line top"></div>
-                <div class="col"></div>
-                <div class="line horizontal-line top"></div>
-                <div class="col"></div>
+            <h1><span class="red-shadow">Tic</span> Tac <span class="blue-shadow">Toe</span></h1>
+            <div class="board">
+                <div class="winning-line"></div>
+                <div class="row">
+                    <div class="col square">
+                        <img class="cross left-margin top-margin" src="cross.png" alt="cross" />
+                        <img class="circle left-margin top-margin" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross top-margin" src="cross.png" alt="cross" />
+                        <img class="circle top-margin" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross right-margin top-margin" src="cross.png" alt="cross" />
+                        <img class="circle right-margin top-margin" src="circle.png" alt="circle" />
+                    </div>
+                </div>
+                <div class="row horizontal"></div>
+                <div class="row">
+                    <div class="col square">
+                        <img class="cross left-margin" src="cross.png" alt="cross" />
+                        <img class="circle left-margin" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross" src="cross.png" alt="cross" />
+                        <img class="circle" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross right-margin" src="cross.png" alt="cross" />
+                        <img class="circle right-margin" src="circle.png" alt="circle" />
+                    </div>
+                </div>
+                <div class="row horizontal"></div>
+                <div class="row">
+                    <div class="col square">
+                        <img class="cross left-margin bottom-margin" src="cross.png" alt="cross" />
+                        <img class="circle left-margin bottom-margin" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross bottom-margin" src="cross.png" alt="cross" />
+                        <img class="circle bottom-margin" src="circle.png" alt="circle" />
+                    </div>
+                    <div class="col vertical"></div>
+                    <div class="col square">
+                        <img class="cross right-margin bottom-margin" src="cross.png" alt="cross" />
+                        <img class="circle right-margin bottom-margin" src="circle.png" alt="circle" />
+                    </div>
+                </div>
             </div>
-            <div class="line vertical-line"></div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="line horizontal-line"></div>
-                <div class="col"></div>
-                <div class="line horizontal-line"></div>
-                <div class="col"></div>
-            </div>
-            <div class="line vertical-line"></div>
-            <div class="row">
-                <div class="col"></div>
-                <div class="line horizontal-line bottom"></div>
-                <div class="col"></div>
-                <div class="line horizontal-line bottom"></div>
-                <div class="col"></div>
-            </div>
+            <h2>Player 1 (X) move</h2>
+            <button class="restart">PLAY AGAIN</button>
         </div>
-        <div class="info">
+        <!-- <h1>Tic Tac Toe</h1> -->
+        <!-- <div class="info">
             <p id="result"></p>
             <p id="move">Player 1 (X) turn</p>
-        </div>
-
+        </div> -->
     </body>
 </html>
