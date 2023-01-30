@@ -3,13 +3,14 @@
     --clr-blue: #5e2bff;
     --clr-red: #dd2d4a;
     --clr-white: rgb(235, 235, 235);
-    --spc-default: 0.7rem;
 }
 
 * {
     font-size: 1.25rem;
     color: var(--clr-white);
 }
+
+/* section styles */
 
 html,
 body,
@@ -28,6 +29,8 @@ body {
     flex-direction: column;
 }
 
+/* font styles */
+
 h1,
 h2 {
     cursor: default;
@@ -38,13 +41,7 @@ span {
     font-size: inherit;
 }
 
-.blue-shadow {
-    text-shadow: 0px 0px 10px var(--clr-blue), 0px 0px 10px var(--clr-blue);
-}
-
-.red-shadow {
-    text-shadow: 0px 0px 10px var(--clr-red), 0px 0px 10px var(--clr-red);
-}
+/* board block styles */
 
 .board {
     height: 500px;
@@ -60,6 +57,10 @@ span {
     aspect-ratio: 1/1;
     cursor: pointer;
     position: relative;
+}
+
+.row {
+    margin: 0;
 }
 
 .horizontal,
@@ -87,18 +88,6 @@ span {
     z-index: -1;
 }
 
-.row {
-    margin: 0;
-}
-
-img.cross,
-img.circle {
-    height: 60%;
-    width: 60%;
-    display: none;
-    opacity: 0;
-}
-
 .winning-line {
     position: absolute;
     height: 10px;
@@ -111,12 +100,36 @@ img.circle {
     box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 1);
 }
 
-.blue {
-    background-color: var(--clr-blue);
+img.cross,
+img.circle {
+    height: 60%;
+    width: 60%;
+    display: none;
+    opacity: 0;
 }
 
-.red {
+button.restart {
+    border: 3px solid var(--clr-red);
+    background-color: transparent;
+    padding: 0.5rem 6rem;
+    border-radius: 20px;
+    display: none;
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px var(--clr-red);
+}
+
+button.restart:hover {
     background-color: var(--clr-red);
+}
+
+/* other styling */
+
+.blue-shadow {
+    text-shadow: 0px 0px 10px var(--clr-blue), 0px 0px 10px var(--clr-blue);
+}
+
+.red-shadow {
+    text-shadow: 0px 0px 10px var(--clr-red), 0px 0px 10px var(--clr-red);
 }
 
 .left-margin {
@@ -135,36 +148,13 @@ img.circle {
     margin-bottom: -10px;
 }
 
-button.restart {
-    background-color: var(--clr-red);
-    padding: 0.5rem 6rem;
-    border-radius: 20px;
-    display: none;
-}
-
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {
-    * {
-        font-size: 1.5rem;
-    }
-    p#move {
-        border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
-    }
-    .col {
-        width: 150px;
-        height: 150px;
-    }
-    i {
-        font-size: 3rem;
-    }
-    .vertical-line {
-        width: calc(3*150px + 8px + 8px);
-    }
-} */
+@media only screen and (min-width: 600px) {
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {

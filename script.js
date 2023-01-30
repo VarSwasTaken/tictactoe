@@ -105,7 +105,11 @@ $(document).ready(() => {
                     $('h2').html('Player 1 (X) move');
                 }
                 nextMoveX = !nextMoveX;
-                if (moves == 9) $('h2').html('Tie!');
+                if (moves == 9) {
+                    $('.col.square').css('cursor', 'default');
+                    $('button.restart').css('display', 'block');
+                    $('h2').html('Tie!');
+                }
                 for (let i = 0; i < 3; i++) {
                     if (complete) break;
                     check(i * 3, i * 3 + 1, i * 3 + 2); // check rows
